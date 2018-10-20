@@ -19,14 +19,14 @@ class CreateLibrosTable extends Migration
             $table->string('titulo_original')->nullable();
             $table->string('autor');
             $table->string('ilustrador')->nullable();
-            $table->string('idioma');
+            $table->string('idioma')->nullable();
             $table->string('genero')->nullable();
-            $table->string('isbn');
+            $table->string('isbn', 25);
             $table->integer('paginas')->nullable();
             $table->date('fecha_publicacion')->nullable();
             $table->string('editorial');
             $table->string('pais')->nullable();
-            $table->integer('existencia');
+            $table->longText('observaciones');
             $table->timestamps();
         });
     }
